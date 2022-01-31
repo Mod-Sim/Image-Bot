@@ -14,7 +14,8 @@
 3. 
 	1. The core product idea is a Discord bot designed specifically for retrieving images from Google Images can reduce these 7 steps down to just 2. To achieve this, users would enter a command in the Discord chat composer. For example, entering `/search puppies` and delivering the message will have an image of a puppy available right away in the Discord chat. This reduces the seven-step process defined above into two steps, and doesn't require the user switch focus off of their Discord chat. A possible future version would allow for interactions with the provided result, which could come in the form of buttons that allow the user to request a different image from the same search term without needing to re-enter the search command.
 	2. A basic implementation of this bot would follow the simple reactor pattern. The event will be a user sending the command to search for an image. This will trigger the bot to react by retrieving the first image from a Google Images search and to send that message in the same Discord channel where it was triggered. If the functionality to request subsequent images beyond the first result is implemented, the bot would follow a responder pattern as it needs to maintain memory of which images it has already provided.
-	3. Storyboard
-<img width="983" alt="Screen Shot 2022-01-30 at 1 22 19 PM" src="https://user-images.githubusercontent.com/77374947/151712206-4fb2a1d1-0d84-4139-9a2d-3171aeaf9719.png">
+	3. Design Mockup
+![Image Search Bot Design Mockup](https://user-images.githubusercontent.com/42685071/151732439-76ce83c0-c022-4e0a-89bc-740297fcbe78.png)
+
 
 [^1]: Some search terms may require 1-2 fewer steps. For example, searching "chowder" provides a small image collage on the right-side of the search screen. Others, like "Stevens Institute of Technology" require scrolling down on the search page to the images snippet. These methods provide quicker access to the first few images provided by Google Images, but since they are inconsistent across search terms we chose to reject them for a process outline that applies to any search term.
