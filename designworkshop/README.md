@@ -3,8 +3,8 @@
 2. 
 	1. The core problem this bot aims to solve is the inconvenience of needing to send an image from the internet to other users in a Discord server. Currently, getting the first image from a Google search requires the following steps minimum[^1]:
 		1. Switch out of Discord into a new browser tab.
-		2. Either entering the term you want to search for *or* going directly to images.google.com
-		3. Either clicking the "Images" tab to load Google Images *or* entering the term you want to search for on images.google.com
+		2. Either entering the term you want to search for *or* going directly to [images.google.com](https://images.google.com)
+		3. Either clicking the "Images" tab to load Google Images *or* entering the term you want to search for on [images.google.com](https://images.google.com)
 		4. Right-clicking the image and copying the image
 		5. Returning to Discord
 		6. Pasting the image you want to send in a new chat message
