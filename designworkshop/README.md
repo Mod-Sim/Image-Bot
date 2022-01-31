@@ -9,11 +9,11 @@
 		5. Returning to Discord
 		6. Pasting the image you want to send in a new chat message
 		7. Send the message
-	2. By definition, bots are agents of automation designed to automated, repetitive, and predefined tasks. A Discord bot designed specifically for retrieving images from Google Images can reduce these 7 steps down to just 2. The proposed efficiency will significantly scale up when Discord users need to send many images from the internet consecutively.
+	2. By definition, bots are agents of automation designed to automated, repetitive, and predefined tasks. Users who need to send multiple images from the internet consecutively in Discord are required to repeat these steps, meaning the time it takes to complete this process can significantly scale up.
 
 3. 
-	1. 
-	2. 
+	1. The core product idea is a Discord bot designed specifically for retrieving images from Google Images can reduce these 7 steps down to just 2. To achieve this, users would enter a command in the Discord chat composer. For example, entering `/search puppies` and delivering the message will have an image of a puppy available right away in the Discord chat. This reduces the seven-step process defined above into two steps, and doesn't require the user switch focus off of their Discord chat. A possible future version would allow for interactions with the provided result, which could come in the form of buttons that allow the user to request a different image from the same search term without needing to re-enter the search command.
+	2. A basic implementation of this bot would follow the simple reactor pattern. The event will be a user 
 	3. Storyboard
 <img width="983" alt="Screen Shot 2022-01-30 at 1 22 19 PM" src="https://user-images.githubusercontent.com/77374947/151712206-4fb2a1d1-0d84-4139-9a2d-3171aeaf9719.png">
 
