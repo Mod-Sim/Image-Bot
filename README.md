@@ -1,6 +1,7 @@
 # IMAGE-BOT
 
 ## Team Members
+SSW 345 - Team 2
 - Serena Lee - [serenadia](https://github.com/serenadia)
 - Mya Phu - [mxfu](https://github.com/mxfu)
 - Tyler Seliber - [Tyler-Seliber](https://github.com/Tyler-Seliber)
