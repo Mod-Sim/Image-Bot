@@ -1,27 +1,50 @@
-const { Client, Intents } = require('discord.js');
+// Require the necessary discord.js classes
+const fs = require('node:fs');
+const { Client, Collection, Intents } = require('discord.js');
+const { token } = require('./config.json');
+
+// Create a new client instance
 const client = new Client({ intents: [Intents.FLAGS.GUILDS] });
 
-client.on('ready', () => {
-    console.log(`Logged in as ${client.user.tag}!`);
+// Read the command files
+client.commands = new Collection();
+const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('.js'));
+
+for (const file of commandFiles) {
+	const command = require(`./commands/${file}`);
+	// Set a new item in the Collection
+	// With the key as the command name and the value as the exported module
+	client.commands.set(command.data.name, command);
+}
+
+// Read the event files for event handling
+const eventFiles = fs.readdirSync('./events').filter(file => file.endsWith('.js'));
+
+for (const file of eventFiles) {
+	const event = require(`./events/${file}`);
+	if (event.once) {
+		client.once(event.name, (...args) => event.execute(...args));
+	} else {
+		client.on(event.name, (...args) => event.execute(...args));
+	}
+}
+
+// Run the specified command
+// Not sure if this code should be here or in events/interactionCreate.js
+client.on('interactionCreate', async interaction => {
+	if (!interaction.isCommand()) return;
+
+	const command = client.commands.get(interaction.commandName);
+
+	if (!command) return;
+
+	try {
+		await command.execute(interaction);
+	} catch (error) {
+		console.error(error);
+		await interaction.reply({ content: 'There was an error while executing this command!', ephemeral: true });
+	}
 });
 
-const options = [
-    '🐭',
-    'https://media.giphy.com/media/wJZTbXayokOgbCfyQe/giphy.gif',
-    'https://media.giphy.com/media/QXh9XnIJetPi0/giphy.gif',
-    '🐁',
-];
-
-client.on('interactionCreate', async (interaction) => {
-    if (!interaction.isCommand()) return;
-
-    if (interaction.commandName === 'randomice') {
-        await interaction.reply(options[Math.floor(Math.random() * options.length)]);
-    }
-
-    if (interaction.commandName === 'ping') {
-        await interaction.reply('🏓');
-    }
-});
-
-client.login(process.env.TOKEN);
+// Login to Discord with your client's token
+client.login(token);
