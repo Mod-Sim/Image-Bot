@@ -2,9 +2,9 @@ name: Docker Image CI
 
 on:
   push:
-    branches: [ AWS-test ]
+    branches: [ main ]
   pull_request:
-    branches: [ AWS-test ]
+    branches: [ main ]
 
 jobs:
 
