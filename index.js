@@ -1,7 +1,10 @@
 // Require the necessary discord.js classes
 const fs = require('node:fs');
 const { Client, Collection, Intents } = require('discord.js');
-const { token } = require('./config.json');
+// Read environment variables
+const config = require('./env-var');
+const token = config.getConfig().token;
+
 
 // Create a new client instance
 const client = new Client({ intents: [Intents.FLAGS.GUILDS] });
