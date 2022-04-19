@@ -16,19 +16,19 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [12.x, 14.x, 16.x]
+        node-version: [16.x]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
     - uses: actions/checkout@v3
     - name: Deploy commands
       uses: actions/setup-node@v3
+      env:
+        CLIENT_ID: '${{ secrets.CLIENT_ID }}'
+        GUILD_ID: '${{ secrets.GUILD_ID }}'
+        TOKEN: '${{ secrets.TOKEN }}'
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-      env:
-        CLIENT_ID: ${{ secrets.CLIENT_ID }}
-        GUILD_ID: ${{ secrets.GUILD_ID }}
-        TOKEN: ${{ secrets.TOKEN }}
     - run: npm install
     - run: npm run commands
