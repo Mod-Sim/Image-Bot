@@ -6,9 +6,9 @@ const config = require('./env-var');
 const token = config.getConfig().token;
 const deployCommands = require('./deploy-commands');
 
-console.log('Deploying commands...');
-deployCommands();
-console.log('Commands deployed.');
+// console.log('Deploying commands...');
+// deployCommands();
+// console.log('Commands deployed.');
 
 
 // Create a new client instance
