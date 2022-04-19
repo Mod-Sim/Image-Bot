@@ -8,6 +8,11 @@ module.exports = function () {
 	const guildId = config.getConfig().guildId;
 	const token = config.getConfig().token;
 
+	console.log('In deploy-commands.js');
+	console.log(`Client ID: ${clientId}`);
+	console.log(`Guild ID: ${guildId}`);
+	console.log(`Token: ${token}`);
+
 	const commands = [];
 	const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('.js'));
 
