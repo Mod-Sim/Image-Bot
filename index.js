@@ -4,6 +4,9 @@ const { Client, Collection, Intents } = require('discord.js');
 // Read environment variables
 const config = require('./env-var');
 const token = config.getConfig().token;
+const deployCommands = require('./deploy-commands');
+
+deployCommands();
 
 
 // Create a new client instance
