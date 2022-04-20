@@ -13,7 +13,7 @@ See [DESIGN.md](DESIGN.md)
 ## Development Instructions
 ### Making a Discord Bot and Getting Credentials
 1. Create a Dicord application and bot by following the official [Discord.js documentation](https://discordjs.guide/preparations/setting-up-a-bot-application.html#creating-your-bot). Be sure to make a note of the bot's **`TOKEN`**.
-2. Open the `OAuth2` tab and, under SCOPES, enable `bot` and `application.commands`. Then, under BOT PERMISSIONS, enable `Read Messages/View Channels`, `Send Messages`, and `Use Slash Commands`.
+2. Open the `OAuth2` tab and, under SCOPES, enable `bot` and `application.commands`.
 3. Invite the bot to your server by following the official [documentation](https://discordjs.guide/preparations/adding-your-bot-to-servers.html). Use the same scopes selected in the previous step.
 4. On the [Discord Developer Portal](https://discord.com/developers/), navigate to your application and from the "General Information" tab, copy your `APPLICATION ID`. This will be the `clientId` later.
 5. Enable Developer Mode on Discord by:
