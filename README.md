@@ -1,5 +1,8 @@
 # IMAGE-BOT
 
+## [Invite Image Bot to your server!](https://discord.com/api/oauth2/authorize?client_id=950561099453968394&permissions=0&scope=bot%20applications.commands)
+
+
 ## Team Members
 SSW 345 - Team 2
 - Serena Lee - [serenadia](https://github.com/serenadia)
