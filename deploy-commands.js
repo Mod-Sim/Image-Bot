@@ -17,13 +17,24 @@ for (const file of commandFiles) {
 
 const rest = new REST({ version: '9' }).setToken(token);
 
-// Deploy commands to the development guild immediately
-rest.put(Routes.applicationGuildCommands(clientId, guildId), { body: commands })
-	.then(() => console.log('Successfully registered application commands to guild.'))
-	.catch(console.error);
+(async () => {
+	try {
+		console.log('Started refreshing application (/) commands.');
 
-// Deploy the commands globally
+		// Deploy commands to the development guild immediately
+		await rest.put(
+			Routes.applicationGuildCommands(clientId, guildId),
+			{ body: commands },
+		);
+		console.log('Successfully reloaded application (/) commands to guild.');
 
-rest.put(Routes.applicationCommands(clientId), { body: commands })
-	.then(() => console.log('Successfully registered application commands globally.'))
-	.catch(console.error);
+		// Deploy commands to globally to production
+		await rest.put(
+			Routes.applicationCommands(clientId),
+			{ body: commands },
+		);
+		console.log('Successfully reloaded application (/) commands globally.');
+	} catch (error) {
+		console.error(error);
+	}
+})();
