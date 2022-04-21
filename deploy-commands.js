@@ -17,6 +17,13 @@ for (const file of commandFiles) {
 
 const rest = new REST({ version: '9' }).setToken(token);
 
+// Deploy commands to the development guild immediately
 rest.put(Routes.applicationGuildCommands(clientId, guildId), { body: commands })
-	.then(() => console.log('Successfully registered application commands.'))
+	.then(() => console.log('Successfully registered application commands to guild.'))
+	.catch(console.error);
+
+// Deploy the commands globally
+
+rest.put(Routes.applicationCommands(clientId), { body: commands })
+	.then(() => console.log('Successfully registered application commands globally.'))
 	.catch(console.error);
