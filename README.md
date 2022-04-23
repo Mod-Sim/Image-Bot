@@ -50,9 +50,9 @@ If you only plan on hosting a development bot and don't intend on distributing i
 4. Run `npm install`
 
 ### Adding/Editing Commands
-Commands can be created and edited in the `commands` folder using the appropriate command file. See [ping.js](commands-dev/ping.js) as an example.
+Commands can be created and edited in the [`commands`](commands) folder using the appropriate command file. See [ping.js](commands-dev/ping.js) as an example.
 
-The `commands` folder is meant to include only commands meant for production. To test and develop new commands, create them in the `commands-dev` folder instead. Once they are ready to be pushed to production, they should be moved to the `commands` folder. Any command files that remain in `commands-dev` will not be pushed to production.
+The `commands` folder is meant to include only commands meant for production. To test and develop new commands, create them in the [`commands-dev`](commands-dev) folder instead. Once they are ready to be pushed to production, they should be moved to the `commands` folder. Any command files that remain in `commands-dev` will not be pushed to production.
 
 Any time new commands are created, they need to be registered. To do so, run `npm run commands`. This will deploy the commands to your development server only. See [**Deploying your Commands**](#deploying-your-commands) below for more information.
 
