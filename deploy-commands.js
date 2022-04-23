@@ -28,7 +28,7 @@ const rest = new REST({ version: '9' }).setToken(token);
 		);
 		console.log('Successfully reloaded application (/) commands to guild.');
 
-		// Deploy commands to globally to production
+		// Deploy commands globally to production
 		await rest.put(
 			Routes.applicationCommands(clientId),
 			{ body: commands },
