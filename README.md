@@ -7,11 +7,12 @@
 </div>
 
 ## Team Members
-SSW 345 - Team 2
-- Serena Lee - [serenadia](https://github.com/serenadia)
-- Mya Phu - [mxfu](https://github.com/mxfu)
-- Tyler Seliber - [Tyler-Seliber](https://github.com/Tyler-Seliber)
-- Mehrab Syed - [msyed5](https://github.com/msyed5)
+
+|                                                                                                    | SSW 345                                                                                  | Team 2                                                                                                     |                                                                                              |
+| -------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| [![serenadia](https://avatars.githubusercontent.com/u/56970671?v=4)](https://github.com/serenadia) | [![mxfu](https://avatars.githubusercontent.com/u/97979359?v=4)](https://github.com/mxfu) | [![Tyler-Seliber](https://avatars.githubusercontent.com/u/42685071?v=4)](https://github.com/Tyler-Seliber) | [![msyed5](https://avatars.githubusercontent.com/u/77374947?v=4)](https://github.com/msyed5) |
+| Serena Lee                                                                                         | Mya Phu                                                                                  | Tyler Seliber                                                                                              | Mehrab Syed                                                                                  |
+| [serenadia](https://github.com/serenadia)                                                          | [mxfu](https://github.com/mxfu)                                                          | [Tyler-Seliber](https://github.com/Tyler-Seliber)                                                          | [msyed5](https://github.com/msyed5)                                                          |
 
 ## Design Milestone
 See [DESIGN.md](DESIGN.md)
