@@ -18,11 +18,21 @@ for (const file of commandFiles) {
 	commands.push(command.data.toJSON());
 }
 
+// Read development commands from commands-dev/ folder
+if (env_state === 'dev') {
+	const commandFilesDev = fs.readdirSync('./commands-dev').filter(file => file.endsWith('.js'));
+
+	for (const file of commandFilesDev) {
+		const command = require(`./commands-dev/${file}`);
+		commands.push(command.data.toJSON());
+	}
+}
+const numCommands = commands.length;
 const rest = new REST({ version: '9' }).setToken(token);
 
 (async () => {
 	try {
-		console.log(`Started refreshing ${env_state} application (/) commands.`);
+		console.log(`Started refreshing ${env_state} application (/) commands with ${numCommands} command(s).`);
 
 		if (env_state === 'dev') {
 			// Deploy commands to the development guild immediately
@@ -31,7 +41,7 @@ const rest = new REST({ version: '9' }).setToken(token);
 				{ body: commands },
 
 			);
-			console.log(`Successfully reloaded application (/) commands to guild ${guildId}.`);
+			console.log(`Successfully reloaded ${numCommands} application (/) command(s) to guild ${guildId}.`);
 
 		} else if (env_state === 'prod') {
 			// Deploy commands globally to production
@@ -39,7 +49,7 @@ const rest = new REST({ version: '9' }).setToken(token);
 				Routes.applicationCommands(clientId),
 				{ body: commands },
 			);
-			console.log('Successfully reloaded application (/) commands globally.');
+			console.log(`Successfully reloaded ${numCommands} application (/) command(s) globally.`);
 		} else {
 			throw new Error(`Invalid environment state: ${env_state}. Must be 'dev' or 'prod'.`);
 		}
