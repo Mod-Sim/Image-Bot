@@ -14,7 +14,7 @@ module.exports = {
 		
 	async execute(interaction) {
 		const query = interaction.options.getString('input');
-		const url = imageSearch.imageSearch();
+		const url = await imageSearch.search(query);
 		const exampleEmbed = new MessageEmbed()
 			.setTitle(query)
 			.setImage(url);
