@@ -1,14 +1,17 @@
-# IMAGE-BOT
+# Image Search Bot for Discord
 
-## [Invite Image Bot to your server!](https://discord.com/api/oauth2/authorize?client_id=950561099453968394&permissions=0&scope=bot%20applications.commands)
-
+<div align="center">
+    <a href="https://discord.com/api/oauth2/authorize?client_id=950561099453968394&permissions=0&scope=bot%20applications.commands">
+        <img src="https://docs.google.com/drawings/d/e/2PACX-1vT8NvgkGLPm2xX0W5kTat9bEcm_m57PQrYqdG4c0J__qLye9fRU-EH4ixTwe3xnHSa6eFYT5YgWVup8/pub?w=356&h=75" alt="Invite Image Bot to your server!"/>
+    </a>
+</div>
 
 ## Team Members
-SSW 345 - Team 2
-- Serena Lee - [serenadia](https://github.com/serenadia)
-- Mya Phu - [mxfu](https://github.com/mxfu)
-- Tyler Seliber - [Tyler-Seliber](https://github.com/Tyler-Seliber)
-- Mehrab Syed - [msyed5](https://github.com/msyed5)
+
+|                                                                                                    | SSW 345                                                                                  | Team 2                                                                                                     |                                                                                              |
+| :------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------: |
+| [![serenadia](https://avatars.githubusercontent.com/u/56970671?v=4)](https://github.com/serenadia) | [![mxfu](https://avatars.githubusercontent.com/u/97979359?v=4)](https://github.com/mxfu) | [![Tyler-Seliber](https://avatars.githubusercontent.com/u/42685071?v=4)](https://github.com/Tyler-Seliber) | [![msyed5](https://avatars.githubusercontent.com/u/77374947?v=4)](https://github.com/msyed5) |
+| Serena Lee <br> [serenadia](https://github.com/serenadia)                                          | Mya Phu <br> [mxfu](https://github.com/mxfu)                                             | Tyler Seliber <br> [Tyler-Seliber](https://github.com/Tyler-Seliber)                                       | Mehrab Syed <br> [msyed5](https://github.com/msyed5)                                         |
 
 ## Design Milestone
 See [DESIGN.md](DESIGN.md)
@@ -47,9 +50,9 @@ If you only plan on hosting a development bot and don't intend on distributing i
 4. Run `npm install`
 
 ### Adding/Editing Commands
-Commands can be created and edited in the `commands` folder using the appropriate command file. See [ping.js](commands-dev/ping.js) as an example.
+Commands can be created and edited in the [`commands`](commands) folder using the appropriate command file. See [ping.js](commands-dev/ping.js) as an example.
 
-The `commands` folder is meant to include only commands meant for production. To test and develop new commands, create them in the `commands-dev` folder instead. Once they are ready to be pushed to production, they should be moved to the `commands` folder. Any command files that remain in `commands-dev` will not be pushed to production.
+The `commands` folder is meant to include only commands meant for production. To test and develop new commands, create them in the [`commands-dev`](commands-dev) folder instead. Once they are ready to be pushed to production, they should be moved to the `commands` folder. Any command files that remain in `commands-dev` will not be pushed to production.
 
 Any time new commands are created, they need to be registered. To do so, run `npm run commands`. This will deploy the commands to your development server only. See [**Deploying your Commands**](#deploying-your-commands) below for more information.
 
