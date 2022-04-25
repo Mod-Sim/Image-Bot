@@ -7,7 +7,7 @@
 
 
 - [x] First Iteration *search image*
-- [ ] Second Iteration *browser multiple images*
+- [ ] Second Iteration *browse multiple images*
 
 ### FIRST ITERATION 💭
 - The first iteration focused not only on searching for an image but the creation of the bot and laying the foundation for the next iteration.
@@ -28,12 +28,12 @@
 - *Action* : Tyler → start bot structure and basic functionality, Mya → make discord environment, continue watch for readability issues, and working on milestone requirements such as use cases, Serena → find a search API to use and test, Mehrab → help with testing and debugging as well as any other tasks that need to be done.
 
 **Apr 14, 2022**
-- *Key Points* : Tyler has pretty much built the foundation of the bot 
+- *Key Points* : Foundation of the bot is pretty much built 
 - *During the meeting* : explaining how the bot will work and the use of the search api 
 - *Action* : same tasks as last meeting + team members putting tasking into the kanban board.
 
 **April 20, 2022** 
-- *Key Points* : bot can now take requests from users in a channel and give back first image in google search.
+- *Key Points* : bot can now take requests from users in a channel and give back first image in Google search.
 - *During the meeting* : talked about other improvements and 2nd iteration to pick from multiple images (how and what we would do) 
 - *Action* : keeping up with pull requests and merging, looking into browsing images and picking the desired image. 
 
