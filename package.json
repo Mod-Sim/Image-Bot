@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "commands": "node deploy-commands.js dev",
-    "dev": "npm run commands && npm run start",
+    "dev": "npm run commands && nodemon index.js",
     "start": "node index.js"
   },
   "repository": {
