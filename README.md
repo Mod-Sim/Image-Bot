@@ -1,5 +1,7 @@
 # Image Search Bot for Discord
 
+A Discord bot that allows you to search Google Images without leaving your channel! To search, enter `/search` in a Discord channel followed by the term you want to search for. The bot will return the first image matching your search term.
+
 <div align="center">
     <a href="https://discord.com/api/oauth2/authorize?client_id=950561099453968394&permissions=0&scope=bot%20applications.commands">
         <img src="https://docs.google.com/drawings/d/e/2PACX-1vT8NvgkGLPm2xX0W5kTat9bEcm_m57PQrYqdG4c0J__qLye9fRU-EH4ixTwe3xnHSa6eFYT5YgWVup8/pub?w=356&h=75" alt="Invite Image Bot to your server!"/>
