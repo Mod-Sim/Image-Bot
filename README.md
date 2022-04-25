@@ -20,6 +20,7 @@ See [DESIGN.md](DESIGN.md)
 It is strongly recommended you make two applications/bots. One will be the actual bot used in production environments, while the other will be for development purposes. This allows you to safely develop and test your bot without impacting the bot that will be active in multiple other servers. In this case, please perform steps 1-4 below twice - once for the production bot and another for the development bot. 
 
 If you only plan on hosting a development bot and don't intend on distributing it globally, you can only create one bot/application by following the steps below, and following the rest of the instructions for using the `dev` environment.
+
 ### Making a Discord Bot and Getting Credentials
 1. Create a Dicord application and bot by following the official [Discord.js documentation](https://discordjs.guide/preparations/setting-up-a-bot-application.html#creating-your-bot). Be sure to make a note of the bot's **`TOKEN`**.
 2. Open the `OAuth2` tab and, under SCOPES, enable `bot` and `application.commands`.
@@ -33,13 +34,26 @@ If you only plan on hosting a development bot and don't intend on distributing i
     5. Exit settings
 6. Right-click on your server from the left and click "Copy ID." This will be the `guildId` later.
 
+### Making a Custom Google Search Engine
+As Google no longer allows direct APIs for Search, you will need to create your own [Programmable Search Engine](https://developers.google.com/custom-search/) and create an API to make use of it.
+1. Login to the [Programmable Search Engine Control Panel](https://programmablesearchengine.google.com/) and create a new search engine.
+2. Give your search engine a name, and select `Search the entire`. Be sure to turn on `Image search` and (optionally, but recommended) `SafeSearch`.
+3. Once created, make a note of the Search engine ID. This will be `cx` later.
+
+The next step is to generate an API key for your search engine.
+1. Visit [this page](https://developers.google.com/custom-search/v1/overview#api_key) and click blue button that says **Get a Key**.
+2. In the menu that appears, click **+ Create a new project** and enter a project name (ex. Discord Image Search Bot). Then click **Next**.
+3. Your API key will be displayed. Make a note of this, as it will be `auth` later. 
+
 ### Getting set up
 1. Clone the repository
-2. Create a new file called  `.env` in the root of the repository and enter the following from the Discord Developer Portal:
+2. Create a new file called  `.env` in the root of the repository and enter the following fields you took note of earlier. You can also retrieve them from the [Discord Developer Portal](https://discord.com/developers/), [Programmable Search Engine Control Panel](https://programmablesearchengine.google.com/), and [Google Cloud API Manager](https://console.cloud.google.com/apis).
     ```
     CLIENT_ID=<clientId>
     GUILD_ID=<guildId>
-    TOkEN=<token>
+    TOKEN=<token>
+    GG_API_KEY=<auth>
+    GG_CX=<cx>
     ```
     _Note: these keys should be from your development bot/application and server. Your production keys should be added as repository secrets by following the steps in [**Deploying your Commands**](#deploying-your-commands) below._
 3. If it is not already there, create a new file called `.gitignore` and include:
