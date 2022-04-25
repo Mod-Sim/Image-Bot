@@ -7,32 +7,32 @@
 - [ ] Second Iteration *browser multiple images*
 
 ### FIRST ITERATION 💭
--The first iteration focused not only on searching for an image but the creation of the bot and laying the foundation for the next iteration.
--Worked with a search api to connect with our bot as the first step.
--Next step was configuring the bot to receive and answer user requests.
--Last was implementing the search api into the user and bot request system.
+- The first iteration focused not only on searching for an image but the creation of the bot and laying the foundation for the next iteration.
+- Worked with a search api to connect with our bot as the first step.
+- Next step was configuring the bot to receive and answer user requests.
+- Last was implementing the search api into the user and bot request system.
 
 ### SECOND ITERATION 💭
--After implementing the search function, we started working on how to modify the search function to show multiple results of the input.
--The end goal is to show the user 15 image results of the input.
--We also have to fix some bugs, especially to inputs that share parts of the same name, i.e. Stevens Institute of Technology, Rochester Institute of Technology, Florida Institute of Technology - only Florida Institute of Technology shows up.
+- After implementing the search function, we started working on how to modify the search function to show multiple results of the input.
+- The end goal is to show the user 15 image results of the input.
+- We also have to fix some bugs, especially to inputs that share parts of the same name, i.e. Stevens Institute of Technology, Rochester Institute of Technology, Florida Institute of Technology - only Florida Institute of Technology shows up.
 
 📘 *scum notes* 📘
 
 **March 30, 2022**
-Key Points : By the last week of April we must have the basics of our bot working and key concepts ready. 
-During Meeting: Tyler will help structure the bot for us and understands how to build a discord bot already so he can be big help. We decided to rethink our bot to be more simply due to time and how busy our members are.
-Action: Tyler → start bot structure and basic functionality, Mya → make discord environment, continue watch for readability issues, and working on milestone requirements such as use cases, Serena → find a search API to use and test, Mehrab → help with testing and debugging as well as any other tasks that need to be done.
+- *Key Points* : By the last week of April we must have the basics of our bot working and key concepts ready. 
+- *During Meeting* : Tyler will help structure the bot for us and understands how to build a discord bot already so he can be big help. We decided to rethink our bot to be more simply due to time and how busy our members are.
+- *Action* : Tyler → start bot structure and basic functionality, Mya → make discord environment, continue watch for readability issues, and working on milestone requirements such as use cases, Serena → find a search API to use and test, Mehrab → help with testing and debugging as well as any other tasks that need to be done.
 
 **Apr 14, 2022**
-*Key Points* : Tyler has pretty much built the foundation of the bot 
-*During the meeting* : explaining how the bot will work and the use of the search api 
-*Action* : same tasks as last meeting + team members putting tasking into the kanban board.
+- *Key Points* : Tyler has pretty much built the foundation of the bot 
+- *During the meeting* : explaining how the bot will work and the use of the search api 
+- *Action* : same tasks as last meeting + team members putting tasking into the kanban board.
 
 **April 20, 2022** 
-*Key Points* : bot can now take requests from users in a channel and give back first image in google search.
-*During the meeting* : talked about other improvements and 2nd iteration to pick from multiple images (how and what we would do) 
-*Action* : keeping up with pull requests and merging, looking into browsing images and picking the desired image. 
+- *Key Points* : bot can now take requests from users in a channel and give back first image in google search.
+- *During the meeting* : talked about other improvements and 2nd iteration to pick from multiple images (how and what we would do) 
+- *Action* : keeping up with pull requests and merging, looking into browsing images and picking the desired image. 
 
 
 
