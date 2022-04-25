@@ -2,7 +2,8 @@
 
 ## DOCUMENTATION  📌📌📌
 ![kanban board](https://user-images.githubusercontent.com/97979359/165011239-eb2c08a0-fef9-43e1-9a9f-a9f1abbd3e69.jpg)
-![List of things] 
+<img width="1110" alt="Screen Shot 2022-04-24 at 9 24 15 PM" src="https://user-images.githubusercontent.com/56970671/165012894-d77deaee-ff4f-455c-b6c9-b97d2b53888f.png">
+
 
 
 - [x] First Iteration *search image*
