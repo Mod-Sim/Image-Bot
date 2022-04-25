@@ -1,5 +1,5 @@
 const { SlashCommandBuilder } = require('@discordjs/builders');
-const { MessageAttachment, MessageEmbed } = require('discord.js');
+const { MessageEmbed, MessageActionRow, MessageButton } = require('discord.js');
 const imageSearch = require('../image_search');
 
 
@@ -19,8 +19,18 @@ module.exports = {
 		const exampleEmbed = new MessageEmbed()
 			.setTitle(query)
 			.setImage(url);
-
-		await interaction.reply({ embeds: [exampleEmbed] });
+		const row = new MessageActionRow()
+			.addComponents(
+				new MessageButton()
+					.setCustomId('prev')
+					.setLabel('Previous')
+					.setStyle('PRIMARY'),
+				new MessageButton()
+					.setCustomId('next')
+					.setLabel('Next')
+					.setStyle('PRIMARY'),
+			);
+		await interaction.reply({ embeds: [exampleEmbed], components: [row] });
 
 	},
 };
