@@ -13,8 +13,9 @@
 | [![serenadia](https://avatars.githubusercontent.com/u/56970671?v=4)](https://github.com/serenadia) | [![mxfu](https://avatars.githubusercontent.com/u/97979359?v=4)](https://github.com/mxfu) | [![Tyler-Seliber](https://avatars.githubusercontent.com/u/42685071?v=4)](https://github.com/Tyler-Seliber) | [![msyed5](https://avatars.githubusercontent.com/u/77374947?v=4)](https://github.com/msyed5) |
 | Serena Lee <br> [serenadia](https://github.com/serenadia)                                          | Mya Phu <br> [mxfu](https://github.com/mxfu)                                             | Tyler Seliber <br> [Tyler-Seliber](https://github.com/Tyler-Seliber)                                       | Mehrab Syed <br> [msyed5](https://github.com/msyed5)                                         |
 
-## Design Milestone
-See [DESIGN.md](DESIGN.md)
+## Milestones
+1. [Design Milestone](DESIGN.md)
+2. [Process Milestone](PROCESS.md)
 
 ## Development Instructions
 It is strongly recommended you make two applications/bots. One will be the actual bot used in production environments, while the other will be for development purposes. This allows you to safely develop and test your bot without impacting the bot that will be active in multiple other servers. In this case, please perform steps 1-4 below twice - once for the production bot and another for the development bot. 
