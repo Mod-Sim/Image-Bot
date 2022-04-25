@@ -34,5 +34,10 @@
 - *During the meeting* : talked about other improvements and 2nd iteration to pick from multiple images (how and what we would do) 
 - *Action* : keeping up with pull requests and merging, looking into browsing images and picking the desired image. 
 
+## Process Reflection
+Working Process
+-All of us underestimated how busy we would all be so we never dedicated a large amount of time to work on the project together. We had several short meetings about what we needed to do and what has been done and then we would work on the bot ourselves. There were quite a few times where some of the members would be having difficulty with running the bot, which wouldn’t have happened had we coded together, but it was solved through a few texts. Overall, with the progress we made during the past few weeks, it was good work, but we would’ve spent less time facing technical issues had we done it together.
+Bot
+-Overall, the bot we have currently satisfies our #1 goal for this project. We wanted to be able to search for images on Discord without having to go to another tab and manually search for the image. Our next goal, which we are currently working on, is to allow the user to choose for the image they want instead of just showing the first result of the image. This feature will allow the user to have more mobility in the bot.
 
 
