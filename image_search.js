@@ -2,6 +2,7 @@ require('dotenv').config();
 const args = process.argv.slice(2);
 const queryArg = args[0];
 
+
 // Following code adapted from https://github.com/googleapis/google-api-nodejs-client/blob/main/samples/customsearch/customsearch.js
 
 // Copyright 2012 Google LLC
@@ -19,6 +20,17 @@ const queryArg = args[0];
 
 'use strict';
 
+let SearchResult = class {
+    constructor(resultArray) {
+        this.resultArray = resultArray;
+        this.currentResult = 0;
+    }
+
+    currentURL() {
+        return this.resultArray[this.currentResult].link;
+    }
+}
+
 const { google } = require('googleapis');
 const customsearch = google.customsearch('v1');
 
@@ -29,7 +41,8 @@ async function search(query) {
         auth: process.env.GG_API_KEY,
         searchType: 'image',
     });
-    return res.data.items[0].link;
+    const result = new SearchResult(res.data.items);
+    return result.currentURL();
 }
 
 if (module === require.main) {
