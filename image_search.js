@@ -27,7 +27,24 @@ let SearchResult = class {
     }
 
     currentURL() {
+        console.log(this.currentResult);
         return this.resultArray[this.currentResult].link;
+    }
+
+    nextURL() {
+        this.currentResult++;
+        if (this.currentResult >= this.resultArray.length) {
+            this.currentResult = 0;
+        }
+        return this.currentURL();
+    }
+    
+    prevURL() {
+        this.currentResult--;
+        if (this.currentResult < 0) {
+            this.currentResult = this.resultArray.length - 1;
+        }
+        return this.currentURL();
     }
 }
 
