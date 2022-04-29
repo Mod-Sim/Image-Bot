@@ -20,7 +20,7 @@ module.exports = {
 		const query = interaction.options.getString('input');
 		const searchResult = await imageSearch.search(query);
 		const url = searchResult.currentSearch().link;
-		const exampleEmbed = new MessageEmbed()
+		const resultEmbed = new MessageEmbed()
 			.setTitle(query)
 			.setImage(url);
 		const row = new MessageActionRow()

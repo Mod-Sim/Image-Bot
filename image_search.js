@@ -30,26 +30,16 @@ let SearchResult = class {
         console.log(this.currentResult);
         return this.resultArray[this.currentResult];
     }
-<<<<<<< Updated upstream
-    // Select the next image
-    nextURL() {
-=======
 
     nextSearch() {
->>>>>>> Stashed changes
         this.currentResult++;
         if (this.currentResult >= this.resultArray.length) {
             this.currentResult = 0;
         }
         return this.currentSearch();
     }
-<<<<<<< Updated upstream
-    // Select the previous image
-    prevURL() {
-=======
     
     prevSearch() {
->>>>>>> Stashed changes
         this.currentResult--;
         if (this.currentResult < 0) {
             this.currentResult = this.resultArray.length - 1;
@@ -71,12 +61,7 @@ async function search(query) {
     });
     // Create the SearchResult object
     const result = new SearchResult(res.data.items);
-<<<<<<< Updated upstream
-    // Return the URL of the image from the SearchResult object
-    return result.currentURL();
-=======
     return result;
->>>>>>> Stashed changes
 }
 
 // Used to run this file externally using 'node image_search.js <query>'
