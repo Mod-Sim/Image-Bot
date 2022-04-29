@@ -34,7 +34,11 @@ module.exports = {
 					.setLabel('Next')
 					.setStyle('PRIMARY'),
 			);
-		await interaction.reply({ embeds: [resultEmbed], components: [row] });
+		// const response =
+		const response = await interaction.reply({ embeds: [resultEmbed], components: [row], fetchReply: true });
+		console.log(`Response ID: ${response.id}`);
+		
+		// console.log(`Response ID: ${await response}`);
 
 	},
 	query: this.query,

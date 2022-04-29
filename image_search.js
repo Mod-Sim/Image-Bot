@@ -27,7 +27,6 @@ let SearchResult = class {
     }
 
     currentSearch() {
-        console.log(this.currentResult);
         return this.resultArray[this.currentResult];
     }
 

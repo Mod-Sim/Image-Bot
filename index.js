@@ -44,8 +44,8 @@ client.on('interactionCreate', async interaction => {
 		};
 
 		if (interaction.isButton()) {
-			console.log("Button pressed");
-			console.log(interaction.component.customId);
+			console.log(`Button pressed. Interaction ID: ${interaction.message.id}`);
+			// console.log(interaction.component.customId);
 			// interaction.reply({ content: 'Button pressed: ' + interaction.message.content });
 			// const originalMessage = interaction.fetchReply();
 			// originalMessage.deleteReply();
@@ -54,9 +54,9 @@ client.on('interactionCreate', async interaction => {
 			// console.log(interaction.token);
 			// // console.log(interaction.client);
 			// Fetch the reply to this interaction
-			interaction.fetchReply()
-				.then(reply => console.log(`Replied with ${reply.content}`))
-				.catch(console.error);
+			// interaction.fetchReply()
+			// 	.then(reply => console.log(`Replied with ${reply.content}`))
+			// 	.catch(console.error);
 
 			return;
 		}
