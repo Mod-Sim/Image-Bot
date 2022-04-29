@@ -32,12 +32,13 @@ for (const file of eventFiles) {
 }
 
 // Run the specified command
-// Not sure if this code should be here or in events/interactionCreate.js
 client.on('interactionCreate', async interaction => {
 	// console.log(interaction);
 	try {
 		if (interaction.isCommand()) {
+			// Fetch the command in the Collection with that name and assign it to the variable command
 			const command = client.commands.get(interaction.commandName);
+			// If command does not exist, return
 			if (!command) return;
 			await command.execute(interaction);
 		};
@@ -48,8 +49,14 @@ client.on('interactionCreate', async interaction => {
 			// interaction.reply({ content: 'Button pressed: ' + interaction.message.content });
 			// const originalMessage = interaction.fetchReply();
 			// originalMessage.deleteReply();
-			const message = interaction.message;
-			message.edit('Hey there!');
+			// const message = interaction.message;
+			// message.edit(interaction.token);
+			// console.log(interaction.token);
+			// // console.log(interaction.client);
+			// Fetch the reply to this interaction
+			interaction.fetchReply()
+				.then(reply => console.log(`Replied with ${reply.content}`))
+				.catch(console.error);
 
 			return;
 		}

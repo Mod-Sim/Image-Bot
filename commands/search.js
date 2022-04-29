@@ -11,11 +11,15 @@ module.exports = {
 			option.setName('input')
 				.setDescription('The search term')
 				.setRequired(true)),
+	
+	async runSearch(input) {
+		const query = interaction.options.getString('input');
+	},
 		
 	async execute(interaction) {
 		const query = interaction.options.getString('input');
 		const url = await imageSearch.search(query);
-		const exampleEmbed = new MessageEmbed()
+		const resultEmbed = new MessageEmbed()
 			.setTitle(query)
 			.setImage(url);
 		const row = new MessageActionRow()
@@ -29,7 +33,8 @@ module.exports = {
 					.setLabel('Next')
 					.setStyle('PRIMARY'),
 			);
-		await interaction.reply({ embeds: [exampleEmbed], components: [row] });
+		await interaction.reply({ embeds: [resultEmbed], components: [row] });
 
 	},
+	query: this.query,
 };
