@@ -45,15 +45,20 @@ client.on('interactionCreate', async interaction => {
 		if (interaction.isButton()) {
 			console.log("Button pressed");
 			console.log(interaction.component.customId);
-			interaction.reply({ content: 'Button pressed: ' + interaction.component.customId });
+			// interaction.reply({ content: 'Button pressed: ' + interaction.message.content });
+			// const originalMessage = interaction.fetchReply();
+			// originalMessage.deleteReply();
+			const message = interaction.message;
+			message.edit('Hey there!');
+
 			return;
 		}
 
-	} catch (error) {
-		console.error(error);
-		await interaction.reply({ content: 'There was an error while executing this command!', ephemeral: true });
-	}
-});
+		} catch (error) {
+			console.error(error);
+			await interaction.reply({ content: 'There was an error while executing this command!', ephemeral: true });
+		}
+	});
 
 // Login to Discord with your client's token
 client.login(token);
