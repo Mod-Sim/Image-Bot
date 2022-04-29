@@ -1,6 +1,7 @@
 const { SlashCommandBuilder } = require('@discordjs/builders');
 const { MessageEmbed, MessageActionRow, MessageButton } = require('discord.js');
 const imageSearch = require('../image_search');
+const Keyv = require('keyv');
 
 
 module.exports = {
@@ -33,10 +34,13 @@ module.exports = {
 					.setCustomId('next')
 					.setLabel('Next')
 					.setStyle('PRIMARY'),
-			);
-		// const response =
+		);
+		
 		const response = await interaction.reply({ embeds: [resultEmbed], components: [row], fetchReply: true });
-		console.log(`Response ID: ${response.id}`);
+		const keyv = new Keyv();
+		await keyv.set(response.id, searchResult);
+		console.log(await keyv.get(response.id));
+		// console.log(`Response ID: ${response.id}`);
 		
 		// console.log(`Response ID: ${await response}`);
 

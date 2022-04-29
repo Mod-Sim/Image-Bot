@@ -26,6 +26,7 @@
     "discord.js": "^13.6.0",
     "dotenv": "^16.0.0",
     "googleapis": "^100.0.0",
+    "keyv": "^4.2.2",
     "request": "^2.88.2"
   }
 }
