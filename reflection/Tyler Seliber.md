@@ -14,10 +14,10 @@ For future projects, I will dedicate more time to following the many design meth
 
 ## Implementation
 1. **What was most helpful about implementing, testing, and integration in your bot project?** <br>
-
+The speed and relative simplicity of our Discord bot made implementation, testing, and integration very straightforward and relatively stress-free. The cababilities of Git source control (branches, commits, merging) also simplified the process as we were able to cleary indicate where certain new features were implemented and find the exact changes made for their implementation. Using JavaScript, Discord.js, and Node.js meant that we could quickly start our development bot and test changes right away. The bot only needed to run on one machine, and Discord neatly handles the rest of the processing so any computer can interact with the bot regardless of needing to run the code locally.
 
 2. **What was most difficult? What would you do differently?** <br>
-
+Debuggings issues was certainly the biggest challenge during implementation. We were familar with debugging tools available in traditional IDEs that allow for code-stepping and viewing the current state of variables, but we found that following the same process for the Node.js project was not as straight-forward. Since our code was being run across many different files and they were launched using Node/npm commands, it wasn't quite as simple as adding breakpoints and clicking the "debug" button in the editor. We resorted to logging certain items to the console for debugging purposes. While this certainly is a valid method, doing so quickly filled the console with information that required sifting through. Additionally, the log statements needed to be deleted after testing. All of this takes away from efficiency during the development process as well as code smell.
 
 3. **What implementation, testing, and integration methods might you want to try again in the future on another project?** <br>
 
