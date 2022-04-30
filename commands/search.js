@@ -1,7 +1,7 @@
 const { SlashCommandBuilder } = require('@discordjs/builders');
 const { MessageEmbed, MessageActionRow, MessageButton } = require('discord.js');
 const imageSearch = require('../image_search');
-const Keyv = require('keyv');
+const resultMap = require('../resultMap');
 
 
 module.exports = {
@@ -18,7 +18,6 @@ module.exports = {
 	},
 		
 	async execute(interaction) {
-		const keyv = new Keyv({ serialize: (input) => { return input } , deserialize: (input) => { return input } });
 		const query = interaction.options.getString('input');
 		const searchResult = await imageSearch.search(query);
 		const url = searchResult.currentSearch().link;
@@ -38,9 +37,8 @@ module.exports = {
 		);
 		
 		const response = await interaction.reply({ embeds: [resultEmbed], components: [row], fetchReply: true });
-		await keyv.set(response.id, searchResult);
-		const A_SearchResult = await keyv.get(response.id);
-		console.log(A_SearchResult.currentSearch().link);
+		await resultMap.set(response.id, searchResult);
+		// const A_SearchResult = await keyv.get(response.id);
+		// console.log(A_SearchResult.currentSearch().link);
 	},
-	searchResultDB: this.keyv,
 };

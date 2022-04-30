@@ -4,6 +4,7 @@ const { Client, Collection, Intents } = require('discord.js');
 // Read environment variables
 const config = require('./env-var');
 const token = config.getConfig().token;
+const resultMap = require('./resultMap');
 
 // Create a new client instance
 const client = new Client({ intents: [Intents.FLAGS.GUILDS] });
@@ -45,18 +46,10 @@ client.on('interactionCreate', async interaction => {
 
 		if (interaction.isButton()) {
 			console.log(`Button pressed. Interaction ID: ${interaction.message.id}`);
-			// console.log(interaction.component.customId);
-			// interaction.reply({ content: 'Button pressed: ' + interaction.message.content });
-			// const originalMessage = interaction.fetchReply();
-			// originalMessage.deleteReply();
-			// const message = interaction.message;
-			// message.edit(interaction.token);
-			// console.log(interaction.token);
-			// // console.log(interaction.client);
-			// Fetch the reply to this interaction
-			// interaction.fetchReply()
-			// 	.then(reply => console.log(`Replied with ${reply.content}`))
-			// 	.catch(console.error);
+			// const searchMap = searchCode.keyv;
+			const A_SearchResult = await resultMap.get(interaction.message.id);
+			console.log(A_SearchResult);
+			// console.log(resultMap);
 
 			return;
 		}
