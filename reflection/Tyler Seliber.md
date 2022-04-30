@@ -20,7 +20,7 @@ The speed and relative simplicity of our Discord bot made implementation, testin
 Debuggings issues was certainly the biggest challenge during implementation. We were familar with debugging tools available in traditional IDEs that allow for code-stepping and viewing the current state of variables, but we found that following the same process for the Node.js project was not as straight-forward. Since our code was being run across many different files and they were launched using Node/npm commands, it wasn't quite as simple as adding breakpoints and clicking the "debug" button in the editor. We resorted to logging certain items to the console for debugging purposes. While this certainly is a valid method, doing so quickly filled the console with information that required sifting through. Additionally, the log statements needed to be deleted after testing. All of this takes away from efficiency during the development process as well as code smell.
 
 3. **What implementation, testing, and integration methods might you want to try again in the future on another project?** <br>
-
+Using Git and existing libraries is certainly going to be at the top of my priority list when working on future projects. There is a fantastic open-source community that continuously improves on libraries and frameworks to make your own development simpler. Discord.js is a wonderful example, as it served as a wrapper for Discord's API with extensive documentation and detailed guides that made getting started super simple and unintimidating.
 
 
 ## Process
