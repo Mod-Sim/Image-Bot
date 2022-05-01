@@ -1,21 +1,32 @@
 ## Reflection
-- Over the past two milestones, you've had the opportunity to apply several software engineering practices and processes in the design and implementation of a bot project. (Links to an external site.)
+- Over the past two milestones, you've had the opportunity to apply several software engineering practices and processes in the design and implementation of a bot project.
 
 # Design
 - What was most helpful about thinking about design methods of your project?
-- 
+
+Thinking and planning about potential design methods were the most helpful for our project. Sitting down and thinking about what we wanted to do with our project allowed us to figure out the goals we wanted to complete with this bot. When we actually started coding our bot, we had clear objectives of what we wanted to complete, so we didn't have to spend extra time figuring out what we wanted to do.
 
 - What was most difficult? What would you do differently?
 
+The most difficult aspect of our design process for our project was figuring out what exactly we wanted to do. Since most of the members had little to no bot developing experience, we had a difficult time deciding what we should do and if it was in our capability to accomplish the task in time. There were many aspects of Discord bot development that we didn't realize until we started working on the project, so it was added roadblocks that we did not know we'd face because of our lack of experience. Now, with some experience on how to code a Discord bot, in the future, it'd be easier to create another, but if I were to go back in time, I would research and plan more thoroughly about the whole Discord bot development process.
+
 - What design methods might you want to try again in the future on another project?
+
+
 
 
 # Implementation
 - What was most helpful about implementing, testing, and integration in your bot project?
 
+
+
 - What was most difficult? What would you do differently?
 
+
+
 - What implementation, testing, and integration methods might you want to try again in the future on another project?
+
+
 
 
 # Process
