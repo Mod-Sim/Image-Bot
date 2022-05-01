@@ -34,10 +34,14 @@ module.exports = {
 					.setCustomId('next')
 					.setLabel('Next')
 					.setStyle('PRIMARY'),
+				new MessageButton()
+					.setLabel('View Original')
+					.setStyle('LINK')
+					.setURL(searchResult.currentSearch().image.contextLink),
+				
 		);
 		
 		const response = await interaction.reply({ embeds: [resultEmbed], components: [row], fetchReply: true });
 		await resultMap.set(response.id, searchResult);
-		await resultMap.set('embed', resultEmbed);
 	},
 };
