@@ -25,13 +25,13 @@ Using Git and existing libraries is certainly going to be at the top of my prior
 
 ## Process
 1. **What was most helpful about implementing kanban and code review in your project?** <br>
-
+These techniques allowed us keep track of what work needs to be done and how efficiently we were able to complete it. Kanban boards provided an excellent overview of all currently open issues and pull requests and their current status. By enforcing code review, we were all required to take a deeper look into each change which helped us get a better understanding for how the code executed. It also allowed for corrections or optimizations to be made before merging the code into the main branch.
 
 2. **What was most difficult? What would you do differently?** <br>
-
+The most difficult aspect was adjusting to the agile development workflow. Scrum meetins were a new concept and we needed to adapt to that style of productivity. After a couple of meetings, we started to get more comfortable with the practice and feel that this helped us to be more prepared for future endeavors.
 
 3. **What software processes or practices might you want to try again in the future on another project?** <br>
-
+I will definitely follow the above mentioned software processes on future projects. These technqiues have proven invaluable in the software development process. It prevents developers from losing track of what needs to be done and allows for more efficient and effective development. Setting milestones and assigning responsibilities helps to ensure that everyone is on the same page and that the software will be developed in the right order.
 
 
 ## Overall
