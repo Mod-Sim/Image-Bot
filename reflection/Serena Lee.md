@@ -48,4 +48,5 @@ I would definitely use the kanban board again in projects in the future. For my 
 # Overall
 - Considering all the design methods, implementation practices, and software processes you've encountered---compare and contrast how the benefits of the different practices and how they might be useful together.
 
+With the experiences I gained throughout this project, I believe that kanban boards will always be beneficial to any software development project or any project that has multiple people. While for most software projects, the requirements for the project will all be outlined before the implementation process, there may be some project's requirements that will constantly be evolving, which may lead to redesigning how the software works mid-implementation. 
 
