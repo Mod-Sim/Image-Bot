@@ -46,5 +46,4 @@ Implementing the Kanban boards and assigning tasks is something I will implement
 ## Overall
 **Considering all the design methods, implementation practices, and software processes you've encountered---*compare and contrast* how the benefits of the different practices and how they might be useful together.**
 
-![image](https://user-images.githubusercontent.com/77374947/166161523-27cb27ef-15d9-473e-ae62-df52ef6e38f8.png)
 
