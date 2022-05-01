@@ -4,6 +4,8 @@ const { Client, Collection, Intents } = require('discord.js');
 // Read environment variables
 const config = require('./env-var');
 const token = config.getConfig().token;
+const resultMap = require('./resultMap');
+const { MessageEmbed } = require('discord.js');
 
 // Create a new client instance
 const client = new Client({ intents: [Intents.FLAGS.GUILDS] });
@@ -32,21 +34,37 @@ for (const file of eventFiles) {
 }
 
 // Run the specified command
-// Not sure if this code should be here or in events/interactionCreate.js
 client.on('interactionCreate', async interaction => {
-	if (!interaction.isCommand()) return;
-
-	const command = client.commands.get(interaction.commandName);
-
-	if (!command) return;
-
+	console.log(interaction);
 	try {
-		await command.execute(interaction);
-	} catch (error) {
-		console.error(error);
-		await interaction.reply({ content: 'There was an error while executing this command!', ephemeral: true });
-	}
-});
+		if (interaction.isCommand()) {
+			// Fetch the command in the Collection with that name and assign it to the variable command
+			const command = client.commands.get(interaction.commandName);
+			// If command does not exist, return
+			if (!command) return;
+			await command.execute(interaction);
+		};
+
+		if (interaction.isButton()) {
+			const messageID = interaction.message.id;
+			const A_SearchResult = await resultMap.get(messageID);
+			if (interaction.customId === 'prev') {
+				A_SearchResult.prevSearch();
+			} else if (interaction.customId === 'next') {
+				A_SearchResult.nextSearch();
+			}
+			const oldEmbed = interaction.message.embeds[0];
+			const newEmbed = new MessageEmbed(oldEmbed)
+				.setImage(await A_SearchResult.currentSearch().link);
+			await interaction.update({ embeds: [newEmbed] });
+			return;
+		}
+
+		} catch (error) {
+			console.error(error);
+			await interaction.reply({ content: 'There was an error while executing this command!', ephemeral: true });
+		}
+	});
 
 // Login to Discord with your client's token
 client.login(token);

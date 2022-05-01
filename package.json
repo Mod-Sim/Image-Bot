@@ -7,6 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "commands": "node deploy-commands.js dev",
     "dev": "npm run commands && npm run start",
+    "nodemon": "npm run commands && nodemon index.js",
     "start": "node index.js"
   },
   "repository": {
@@ -26,6 +27,7 @@
     "discord.js": "^13.6.0",
     "dotenv": "^16.0.0",
     "googleapis": "^100.0.0",
+    "keyv": "^4.2.2",
     "request": "^2.88.2"
   }
 }
