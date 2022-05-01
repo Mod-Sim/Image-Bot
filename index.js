@@ -35,7 +35,6 @@ for (const file of eventFiles) {
 
 // Run the specified command
 client.on('interactionCreate', async interaction => {
-	// console.log(interaction);
 	try {
 		if (interaction.isCommand()) {
 			// Fetch the command in the Collection with that name and assign it to the variable command
@@ -46,33 +45,33 @@ client.on('interactionCreate', async interaction => {
 		};
 
 		if (interaction.isButton()) {
-			const messageID = interaction.message.id;
-			const A_SearchResult = await resultMap.get(messageID);
+			// Get the message that was interacted with
+			const message = interaction.message;
+			const messageID = message.id;
+			
+			// Get the search result for that message from the resultMap
+			const searchResult = await resultMap.get(messageID);
 			if (interaction.customId === 'prev') {
-				A_SearchResult.prevSearch();
+				searchResult.prevSearch();
 			} else if (interaction.customId === 'next') {
-				A_SearchResult.nextSearch();
+				searchResult.nextSearch();
 			}
-			const oldEmbed = interaction.message.embeds[0];
-			const newEmbed = new MessageEmbed(oldEmbed)
-				.setImage(await A_SearchResult.currentSearch().link);
-			const row = new MessageActionRow()
-				.addComponents(
-					new MessageButton()
-						.setCustomId('prev')
-						.setLabel('Previous')
-						.setStyle('PRIMARY'),
-					new MessageButton()
-						.setCustomId('next')
-						.setLabel('Next')
-						.setStyle('PRIMARY'),
-					new MessageButton()
-						.setLabel('View Original')
-						.setStyle('LINK')
-						.setURL(A_SearchResult.currentSearch().image.contextLink),
 
-				);
-			await interaction.update({ embeds: [newEmbed], components: [row], fetchReply: true });
+			// Update the embed with information from new image
+			const oldEmbed = message.embeds[0];
+			const newEmbed = new MessageEmbed(oldEmbed)
+				.setImage(await searchResult.currentSearch().link);
+			
+			// Update the "View Original" button to point to the new image
+			const actionRow = message.components[0];
+			actionRow.spliceComponents(2, 1, new MessageButton()
+				.setLabel('View Original')
+				.setStyle('LINK')
+				.setURL(searchResult.currentSearch().image.contextLink)
+			);
+
+			// Edit the original message
+			await interaction.update({ embeds: [newEmbed], components: [actionRow] });
 			return;
 		}
 
