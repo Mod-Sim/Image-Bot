@@ -35,4 +35,4 @@ I will definitely follow the above mentioned software processes on future projec
 
 
 ## Overall
-Considering all the design methods, implementation practices, and software processes you've encountered---**compare and contrast** how the benefits of the different practices and how they might be useful together.
+**Considering all the design methods, implementation practices, and software processes you've encountered---*compare and contrast* how the benefits of the different practices and how they might be useful together.**
