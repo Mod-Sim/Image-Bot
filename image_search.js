@@ -19,9 +19,49 @@ const queryArg = args[0];
 
 'use strict';
 
+// Object to store the array of search results
+let SearchResult = class {
+    constructor(resultArray) {
+        this.resultArray = resultArray;
+        this.currentResult = 0;
+    }
+
+    currentSearch() {
+        console.log(this.currentResult);
+        return this.resultArray[this.currentResult];
+    }
+<<<<<<< Updated upstream
+    // Select the next image
+    nextURL() {
+=======
+
+    nextSearch() {
+>>>>>>> Stashed changes
+        this.currentResult++;
+        if (this.currentResult >= this.resultArray.length) {
+            this.currentResult = 0;
+        }
+        return this.currentSearch();
+    }
+<<<<<<< Updated upstream
+    // Select the previous image
+    prevURL() {
+=======
+    
+    prevSearch() {
+>>>>>>> Stashed changes
+        this.currentResult--;
+        if (this.currentResult < 0) {
+            this.currentResult = this.resultArray.length - 1;
+        }
+        return this.currentSearch();
+    }
+}
+
 const { google } = require('googleapis');
 const customsearch = google.customsearch('v1');
 
+// Search Google Images for "query"
 async function search(query) {
     const res = await customsearch.cse.list({
         cx: process.env.GG_CX,
@@ -29,11 +69,18 @@ async function search(query) {
         auth: process.env.GG_API_KEY,
         searchType: 'image',
     });
-    return res.data.items[0].link;
+    // Create the SearchResult object
+    const result = new SearchResult(res.data.items);
+<<<<<<< Updated upstream
+    // Return the URL of the image from the SearchResult object
+    return result.currentURL();
+=======
+    return result;
+>>>>>>> Stashed changes
 }
 
+// Used to run this file externally using 'node image_search.js <query>'
 if (module === require.main) {
-    // console.log(queryArg);
     search(queryArg).catch(console.error);
 }
 
