@@ -12,7 +12,7 @@ The most difficult aspect of our design process for our project was figuring out
 
 - What design methods might you want to try again in the future on another project?
 
-
+In the future, I want to spend more time researching and planning different design methods that are best suited for the project. Thoroughly planning the design methods will make it easier to implement a solution, instead of spending more time figuring out what to do. 
 
 
 # Implementation
