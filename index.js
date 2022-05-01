@@ -5,6 +5,7 @@ const { Client, Collection, Intents } = require('discord.js');
 const config = require('./env-var');
 const token = config.getConfig().token;
 const resultMap = require('./resultMap');
+const { MessageEmbed } = require('discord.js');
 
 // Create a new client instance
 const client = new Client({ intents: [Intents.FLAGS.GUILDS] });
@@ -34,7 +35,7 @@ for (const file of eventFiles) {
 
 // Run the specified command
 client.on('interactionCreate', async interaction => {
-	// console.log(interaction);
+	console.log(interaction);
 	try {
 		if (interaction.isCommand()) {
 			// Fetch the command in the Collection with that name and assign it to the variable command
@@ -45,12 +46,17 @@ client.on('interactionCreate', async interaction => {
 		};
 
 		if (interaction.isButton()) {
-			console.log(`Button pressed. Interaction ID: ${interaction.message.id}`);
-			// const searchMap = searchCode.keyv;
-			const A_SearchResult = await resultMap.get(interaction.message.id);
-			console.log(A_SearchResult);
-			// console.log(resultMap);
-
+			const messageID = interaction.message.id;
+			const A_SearchResult = await resultMap.get(messageID);
+			if (interaction.customId === 'prev') {
+				A_SearchResult.prevSearch();
+			} else if (interaction.customId === 'next') {
+				A_SearchResult.nextSearch();
+			}
+			const oldEmbed = interaction.message.embeds[0];
+			const newEmbed = new MessageEmbed(oldEmbed)
+				.setImage(await A_SearchResult.currentSearch().link);
+			await interaction.update({ embeds: [newEmbed] });
 			return;
 		}
 

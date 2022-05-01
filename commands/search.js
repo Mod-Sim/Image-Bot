@@ -2,7 +2,7 @@ const { SlashCommandBuilder } = require('@discordjs/builders');
 const { MessageEmbed, MessageActionRow, MessageButton } = require('discord.js');
 const imageSearch = require('../image_search');
 const resultMap = require('../resultMap');
-
+const wait = require('node:timers/promises').setTimeout;
 
 module.exports = {
 	data: new SlashCommandBuilder()
@@ -38,7 +38,6 @@ module.exports = {
 		
 		const response = await interaction.reply({ embeds: [resultEmbed], components: [row], fetchReply: true });
 		await resultMap.set(response.id, searchResult);
-		// const A_SearchResult = await keyv.get(response.id);
-		// console.log(A_SearchResult.currentSearch().link);
+		await resultMap.set('embed', resultEmbed);
 	},
 };
