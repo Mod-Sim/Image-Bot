@@ -18,15 +18,15 @@ In the future, I want to spend more time researching and planning different desi
 # Implementation
 - What was most helpful about implementing, testing, and integration in your bot project?
 
-
+Using the Git control system has allowed the team to easily edit and interact with other group member's code, simplifying the implementation process of the project. Discord.js, Node.js, and JavaScript made the testing and integration processes of the project seamless as the modules took care of all the complicated steps. These packages allowed us to immediately start testing and integrating our bot right after we implemented our code. 
 
 - What was most difficult? What would you do differently?
 
-
+The most difficult part of the implementation was finding and connecting the Google API to our bot. There are many different image APIs and we spent a lot of time researching which ones would be best fit for our project. After selecting the Google API, we spent a lot of time figuring out how to connect the API to our bot and at the end we realized that we had to set the keys within our code. Next time, we will have the knowledge to connect any API we use. 
 
 - What implementation, testing, and integration methods might you want to try again in the future on another project?
 
-
+For future projects, I want to use more APIs, which proved to be very useful for our bot project. We used the Google Image API, in which we were able to directly get an image from Google without having to manually search and download images. There are many other useful APIs that can be used in the future that will simplify and cut down the implementation process.
 
 
 # Process
