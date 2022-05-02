@@ -2,7 +2,7 @@ const { SlashCommandBuilder } = require('@discordjs/builders');
 const { MessageEmbed, MessageActionRow, MessageButton } = require('discord.js');
 const imageSearch = require('../image_search');
 const resultMap = require('../resultMap');
-const wait = require('node:timers/promises').setTimeout;
+require('dotenv').config();
 
 module.exports = {
 	data: new SlashCommandBuilder()
@@ -22,7 +22,10 @@ module.exports = {
 		const searchResult = await imageSearch.search(query);
 		const url = searchResult.currentSearch().link;
 		const resultEmbed = new MessageEmbed()
-			.setTitle(query)
+			.setTitle(`Images of ${query}`)
+			.setURL(`https://cse.google.com/cse?cx=${process.env.GG_CX}#gsc.q=${query}`)
+			.setDescription(`Result ${searchResult.currentResult + 1} of ${searchResult.resultArray.length}`)
+			.addField(searchResult.currentSearch().title, searchResult.currentSearch().displayLink)
 			.setImage(url);
 		const row = new MessageActionRow()
 			.addComponents(
