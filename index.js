@@ -60,8 +60,6 @@ client.on('interactionCreate', async interaction => {
 			// Update the embed with information from new image
 			const oldEmbed = message.embeds[0];
 			const newEmbed = new MessageEmbed(oldEmbed)
-				.setDescription(`Result ${searchResult.currentResult + 1} of ${searchResult.resultArray.length}`)
-				.spliceFields(0, 1, { name: searchResult.currentSearch().title, value: searchResult.currentSearch().displayLink })
 				.setImage(await searchResult.currentSearch().link);
 			
 			// Update the "View Original" button to point to the new image
