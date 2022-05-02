@@ -6,7 +6,7 @@ The most challenging was our skillset, we had truly only one person on the team 
 3. What design methods might you want to try again in the future on another project?
 I would want to continue having a lead developer, this helps alot with keeping a cohesive idea and structure. It was really nice to have a point person to go to for questions and guidance for our design. They kept us on track and led our group well enough within our skills to produce a bot that we are proud of. I would like to try again in future researching and planning more complex designs for other projects to be more dynamic. 
 
-Implementation
+# Implementation
 1. What was most helpful about implementing, testing, and integration in your bot project?
 How simple our bot was, by having a bot project that only needed to run on one computer made testing, implementing, and integration very easy as the git control system allowed for a fast and easy process to edit our code with each other. And due to discord.js, node.js and javascript we were able to implement our project with one system since everything was handled on their side; very convenient testing. 
 2. What was most difficult? What would you do differently?
