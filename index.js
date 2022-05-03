@@ -73,7 +73,7 @@ client.on('interactionCreate', async interaction => {
 			);
 
 			// Edit the original message
-			await interaction.update({ content: 'This image has changed!', embeds: [newEmbed], components: [actionRow] });
+			await interaction.update({ embeds: [newEmbed], components: [actionRow] });
 			return;
 		}
 
