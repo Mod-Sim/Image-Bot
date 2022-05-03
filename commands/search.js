@@ -46,7 +46,7 @@ module.exports = {
 				
 		);
 		
-		const response = await interaction.reply({ embeds: [resultEmbed], components: [row], fetchReply: true });
+		const response = await interaction.reply({ content: 'Here ya go!', embeds: [resultEmbed], components: [row], fetchReply: true });
 		await resultMap.set(response.id, searchResult);
 	},
 };
