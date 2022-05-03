@@ -21,9 +21,11 @@ module.exports = {
 		const query = interaction.options.getString('input');
 		const searchResult = await imageSearch.search(query);
 		const url = searchResult.currentSearch().link;
+		// Format the search term to replace spaces with %20 for custom search engine URL
+		const cseURL = query.replaceAll(' ', '%20');
 		const resultEmbed = new MessageEmbed()
 			.setTitle(`Images of ${query}`)
-			.setURL(`https://cse.google.com/cse?cx=${process.env.GG_CX}#gsc.q=${query}`)
+			.setURL(`https://cse.google.com/cse?cx=${process.env.GG_CX}#gsc.q=${cseURL}`)
 			.setDescription(`Result ${searchResult.currentResult + 1} of ${searchResult.resultArray.length}`)
 			.addField(searchResult.currentSearch().title, searchResult.currentSearch().displayLink)
 			.setImage(url);
