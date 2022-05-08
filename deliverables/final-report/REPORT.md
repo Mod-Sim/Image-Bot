@@ -21,7 +21,7 @@ In addition, there are buttons below the embed that allow users to interact with
 Your reflection on the development process and project
 
 ## Limitations 
-
+One of our biggest limitations was not being able to find time where everyone could meet and do the project together. Instead, we met mainly on Discord and communicated all our problems and questions to each other on the platform. Because we did not meet in person, whenever we had problems with our code, it was difficult to convey the issue and solve it online. 
 
 ## Future Work
 
