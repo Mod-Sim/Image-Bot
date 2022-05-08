@@ -23,10 +23,12 @@ Your reflection on the development process and project
 ## Limitations 
 One of our biggest limitations was not being able to find time where everyone could meet and do the project together. Instead, we met mainly on Discord and communicated all our problems and questions to each other on the platform. Because we did not meet in person, whenever we had problems with our code, it was difficult to convey the issue and solve it online.
 
+In terms of bot functionality, one limitation is that some images will not be displayed. This is due to an issue with Discord's API where certain image URLs are flagged as not "well formatted" so they cannot be embedded in the message. One workaround is to download the image locally to the server and then upload and attach it to message responses, but this will increase response time and also the computational resources necessary, which may degreade user experience. More information can be found in issue [#30](https://github.com/Mod-Sim/Image-Bot/issues/30). 
+
 ## Future Work
 While we made our bot do everything we wanted it to do (search and post an image), if we were to continue this project in the future, we'd want to implement more advanced features. 
 
-One feature we'd want to implement is the user can privately search and browse for an image. Currently, when the user searches for an image, it is posted publicly on the channel it was called from. With the private search feature, the user can privately search and browse for a picture and at the end choose if they want to post the picture publicly. 
+One feature we'd want to implement is the user can privately search and browse for an image. Currently, when the user searches for an image, it is posted publicly on the channel it was called from. With the private search feature, the user can privately search and browse for a picture and at the end choose if they want to post the picture publicly. More information can be found in issue [#26](https://github.com/Mod-Sim/Image-Bot/issues/26)
 
 ## Presentation video
 https://user-images.githubusercontent.com/42685071/167313637-585ab7fc-f07f-4308-9c81-ab83834d33d6.mp4
