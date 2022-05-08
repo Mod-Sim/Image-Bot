@@ -24,7 +24,9 @@ Your reflection on the development process and project
 One of our biggest limitations was not being able to find time where everyone could meet and do the project together. Instead, we met mainly on Discord and communicated all our problems and questions to each other on the platform. Because we did not meet in person, whenever we had problems with our code, it was difficult to convey the issue and solve it online. 
 
 ## Future Work
+While we made our bot do everything we wanted it to do (search and post an image), if we were to continue this project in the future, we'd want to implement more advanced features. 
 
+One feature we'd want to implement is the user can privately search and browse for an image. Currently, when the user searches for an image, it is posted publicly on the channel it was called from. With the private search feature, the user can privately search and browse for a picture and at the end choose if they want to post the picture publicly. 
 
 ## Presentation video
 https://drive.google.com/file/d/1S6gghWJtVSIKxK4VFAWV4i56Ny8l3aQu/view?usp=sharing
