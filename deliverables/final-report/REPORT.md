@@ -21,7 +21,9 @@ In addition, there are buttons below the embed that allow users to interact with
 Overall, the team is very satisfied by the work that was produced. It was everyone's first time creating a Discord bot so we all struggled on coding it. While we all had our own difficulties with this bot, we learned a lot, not just with coding, but general software management practices. From designing the 
 class diagrams for our bot to actually implementing features, we all learned valuable skills that we will use in the future. 
 
+The implementation phase was the most difficult for the team because it was everyone's first time making a Discord bot. Some aspects of the implementation took more time than we thought, trying to connect the image API to our bot was difficult and we spent a lot of time researching on how to fix our problems. We spent a lot of time live coding, because it was easier for us to get the work done on one device and not have to deal with any potential problems that may arise from everyone on the team merging their code. 
 
+The team learned a lot of useful development practices throughout the duration of the project. We were introduced to Kanban boards at the beginning of the semester and it has made creating and assigning tasks to members so much easier. Everyone knew what the status of each task was and were able to work accordingly to what needed to be done. While testing our bot, we had several servers dedicated to testing our bot. We had both a production and development bot server so we could test whatever we committed without having to fear that we'll break something. 
 
 
 ## Limitations 
