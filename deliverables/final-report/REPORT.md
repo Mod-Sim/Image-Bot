@@ -18,7 +18,11 @@ Search results are formatted as message embeds, and include the following:
 In addition, there are buttons below the embed that allow users to interact with the results. Users can browse between image results, and the message embed dynamically updates. There is an additional button to view the original website that image was published on.
 
 ## Reflection
-Your reflection on the development process and project
+Overall, the team is very satisfied by the work that was produced. It was everyone's first time creating a Discord bot so we all struggled on coding it. While we all had our own difficulties with this bot, we learned a lot, not just with coding, but general software management practices. From designing the 
+class diagrams for our bot to actually implementing features, we all learned valuable skills that we will use in the future. 
+
+
+
 
 ## Limitations 
 One of our biggest limitations was not being able to find time where everyone could meet and do the project together. Instead, we met mainly on Discord and communicated all our problems and questions to each other on the platform. Because we did not meet in person, whenever we had problems with our code, it was difficult to convey the issue and solve it online.
