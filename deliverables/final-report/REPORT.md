@@ -25,6 +25,8 @@ The implementation phase was the most difficult for the team because it was ever
 
 The team learned a lot of useful development practices throughout the duration of the project. We were introduced to Kanban boards at the beginning of the semester and it has made creating and assigning tasks to members so much easier. Everyone knew what the status of each task was and were able to work accordingly to what needed to be done. While testing our bot, we had several servers dedicated to testing our bot. We had both a production and development bot server so we could test whatever we committed without having to fear that we'll break something. 
 
+Our bot project idea was very simple, but there were a lot of challenges that we had to overcome to create our bot. All of our members learned how to better manage their time and learned about many different software practices that are used in industry. While we were able to accomplish everything we wanted for our bot, in the future, we could revisit this one day and add more advanced features. All of us are very satisfied by the work we've done and the knowledge we gained from this project.
+
 
 ## Limitations 
 One of our biggest limitations was not being able to find time where everyone could meet and do the project together. Instead, we met mainly on Discord and communicated all our problems and questions to each other on the platform. Because we did not meet in person, whenever we had problems with our code, it was difficult to convey the issue and solve it online.
